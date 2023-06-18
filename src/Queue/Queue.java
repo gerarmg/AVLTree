@@ -127,7 +127,7 @@ public class Queue<T> implements QueueADT<T> {
             start = 0; //guarantee that start<=end y que queue[start] == queue[0]
             end = (end % queue.length);
         }
-        // invertimos el arreglo
+        // reverse the array
         for(i=start; i<=end/2; i++){
             aux = queue[i];
             queue[i] = queue[end-i];

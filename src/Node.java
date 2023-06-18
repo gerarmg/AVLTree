@@ -59,5 +59,13 @@ public class Node <T extends Comparable>{
         this.ef = ef;
     }
     
+    public void hang(Node<T> newNode){
+        if(newNode.elem.compareTo(elem) < 0)
+            left = newNode;
+        else
+            right = newNode;
+        
+        newNode.setDad(this);
+    }
     
 }
